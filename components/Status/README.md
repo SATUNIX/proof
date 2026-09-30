@@ -1,0 +1,1 @@
+Status is an inline glyph plus a word for a state: `success`, `warning`, `danger`, `info`, `neutral`. The word and glyph carry the meaning; the colour only reinforces it. Use it in tables, lists and headers where a filled Tag would be too loud.

@@ -1,0 +1,3 @@
+Pattern is a decorative strip for page furniture. `kind`: barcode (seeded, stable per `seed`), halftone (fades left to right), dots, ticks, stripes, hatch, checker, grid, crosses, ruler, steps, waves, chevrons. `height` sets px (default 40); `tone` is `lime`, `violet` or `gray` (default `fg`).
+
+Use one or two kinds per page, as dividers, band footers, status strips and empty-state fills. A pattern never carries information and is always `aria-hidden`. Keep patterns to their own strip; do not put text over them.

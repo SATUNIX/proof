@@ -1,0 +1,36 @@
+<!-- @dsCard height=300 -->
+<style>
+body{margin:0;background:var(--bg)}
+.cv{display:block;width:960px;height:300px}
+.lime{fill:var(--lime)} .ink{fill:var(--fg)} .violet{fill:var(--violet)} .relief{fill:var(--gray)}
+.mk{fill:none;stroke:var(--bg);stroke-width:1.5}
+.name{font-family:var(--font-sans);font-weight:600;font-size:120px;letter-spacing:-0.05em;fill:var(--fg)}
+.tag{font-family:var(--font-sans);font-size:14px;fill:var(--muted)}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+<svg class="cv" viewBox="0 0 960 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Proof">
+<!--
+Blocks: lime 264x160 (accent, the one loud colour), ink slab 168x260 (fg: black on light, paper on dark), violet 160x92, gray 96x92 as relief; sides are multiples of space-2 (8px).
+Arrangement: a tall ink slab on the right edge with lime over violet and gray stacked beside it, like a printed proof sheet.
+Pattern: precise, technical, mono and ruled -> registration crosshairs (the system's own corner mark) on a 24px grid (space-4) across the slab, in the ground colour.
+Steps and radii: space-4 24px pitch, space-2 8px gaps, radius-none (square corners).
+-->
+<rect class="lime" x="496" y="24" width="264" height="160"/>
+<rect class="violet" x="496" y="192" width="160" height="92"/>
+<rect class="relief" x="664" y="192" width="96" height="92"/>
+<rect class="ink" x="768" y="24" width="168" height="260"/>
+<g id="xh"></g>
+<text class="name" x="20" y="226">Proof</text>
+<text class="tag" x="24" y="262">Paper, ink and one loud colour.</text>
+</svg>
+<script>
+(function(){
+  var g=document.getElementById('xh'),out='';
+  for(var r=0;r<10;r++)for(var c=0;c<7;c++){
+    var x=780+c*24, y=36+r*24;
+    if(y>270) continue;
+    out+='<path class="mk" d="M'+x+' '+(y-8)+'v16M'+(x-8)+' '+y+'h16M'+(x+3)+' '+y+'a3 3 0 1 0 -6 0 3 3 0 1 0 6 0"/>';
+  }
+  g.innerHTML=out;
+})();
+</script>

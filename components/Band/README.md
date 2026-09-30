@@ -1,0 +1,1 @@
+Band is a full-width lime (or `tone="ink"`) slab: optional rounded paper `plate` (monospaced text, e.g. install commands) with a `plateLabel`, mono-caps copy (children), and a footer row with a large `headline`, a tick pattern and `meta`. Use one per page for the key message. Text on lime is `on-accent`.

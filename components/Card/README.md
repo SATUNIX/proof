@@ -1,0 +1,1 @@
+Card is a framed panel on `surface` with optional `eyebrow` (mono caps), `title` (28px), body children and a `footer` (ruled, for actions). `tone`: default, `accent` (lime, one per group), `invert`. Cards sit in a gap-16 grid; do not nest them and do not add shadows.

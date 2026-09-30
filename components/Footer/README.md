@@ -1,0 +1,1 @@
+Footer closes a page: a big sign-off (`title`, node or string, 64px), a column of mono `links`, and a Barcode below a 2px rule.

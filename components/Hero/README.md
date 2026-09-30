@@ -1,0 +1,1 @@
+Hero opens a page: a two-ended mono meta row (`left`, `right`), a row of registration crosshairs above and below a wordmark that auto-fits the container width (uppercase, width 112), then any children (typically a Band). Use one per page and keep the title to a short word or two.

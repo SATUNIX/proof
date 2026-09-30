@@ -1,0 +1,1 @@
+StatusBar is a strip with a Barcode at each end and status dots with mono labels between (`items` as `{label, on}`). It is decoration for a live state (online, version, time). Barcodes are seeded by `seed` and `seed2`.

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proof design system</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<link rel="stylesheet" href="tokens.css">
+<style>
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font-sans)}
+h1{font-size:56px;letter-spacing:-0.035em;margin:0;padding:var(--space-4)}
+nav{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);padding:var(--space-3) var(--space-4);border-block:var(--border-structural) solid var(--rule);font:11px var(--font-mono);text-transform:uppercase}
+nav a,button{color:var(--link)}
+button{font:11px var(--font-mono);text-transform:uppercase;background:none;border:var(--border-structural) solid var(--rule);color:var(--fg);padding:var(--space-1) var(--space-2);cursor:pointer}
+section{border-bottom:var(--border-structural) solid var(--rule)}
+header{display:flex;gap:var(--space-3);align-items:baseline;padding:var(--space-3) var(--space-4)}
+h2{margin:0;font-size:20px;letter-spacing:-0.02em}
+header span{font:11px var(--font-mono);text-transform:uppercase;color:var(--muted)}
+iframe{display:block;width:100%;border:0;background:var(--bg)}
+</style>
+</head>
+<body>
+<h1>Proof</h1>
+<nav><button id="theme">Toggle dark</button><a href="#Band">Band</a><a href="#Banner">Banner</a><a href="#Button">Button</a><a href="#Callout">Callout</a><a href="#Card">Card</a><a href="#Checkbox">Checkbox</a><a href="#CodeBlock">CodeBlock</a><a href="#Cover">Cover</a><a href="#DataTable">DataTable</a><a href="#Disclosure">Disclosure</a><a href="#Footer">Footer</a><a href="#Glyph">Glyph</a><a href="#Hero">Hero</a><a href="#IconButton">IconButton</a><a href="#Input">Input</a><a href="#Pattern">Pattern</a><a href="#Progress">Progress</a><a href="#RowList">RowList</a><a href="#Section">Section</a><a href="#Select">Select</a><a href="#Stat">Stat</a><a href="#Status">Status</a><a href="#StatusBar">StatusBar</a><a href="#Steps">Steps</a><a href="#Switch">Switch</a><a href="#Tabs">Tabs</a><a href="#Tag">Tag</a><a href="#TileGrid">TileGrid</a><a href="#Topbar">Topbar</a></nav>
+<section id="Band">
+<header><h2>Band</h2><span>Lime band with paper plate, ink variant</span></header>
+<iframe title="Band preview" loading="lazy" style="height:330px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=330 subtitle=&quot;Lime band with paper plate, ink variant&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;},h(P.Band,{plate:&#x27;npm install proof\nproof init\nproof build&#x27;,plateLabel:&#x27;Install&#x27;,headline:&#x27;One package. Install once.&#x27;,meta:&#x27;MIT&#x27;},&#x27;A short description in mono caps explains what the band is about in two or three lines.&#x27;),h(P.Band,{tone:&#x27;ink&#x27;,headline:&#x27;Ink variant&#x27;,meta:&#x27;v2&#x27;},&#x27;A full-width band without a plate.&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Banner">
+<header><h2>Banner</h2><span>Huge tag block, headline, actions</span></header>
+<iframe title="Banner preview" loading="lazy" style="height:260px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=260 subtitle=&quot;Huge tag block, headline, actions&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Banner,{tag:&#x27;Beta&#x27;,title:&#x27;This feature is still in testing.&#x27;,actions:[h(P.Button,{key:1,href:&#x27;#&#x27;},&#x27;Read the notes&#x27;),h(P.Button,{key:2,href:&#x27;#&#x27;,variant:&#x27;accent&#x27;},&#x27;Report a problem&#x27;)]},&#x27;Expect rough edges. Tell us what breaks and we will fix it.&#x27;)}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Button">
+<header><h2>Button</h2><span>Outline, accent, ink, small, icon, disabled</span></header>
+<iframe title="Button preview" loading="lazy" style="height:170px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Actions&quot; height=170 subtitle=&quot;Outline, accent, ink, small, icon, disabled&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;},
+ Row(h(P.Button,{variant:&#x27;accent&#x27;,icon:&#x27;arrow-right&#x27;},&#x27;Get started&#x27;),h(P.Button,null,&#x27;Outline&#x27;),h(P.Button,{variant:&#x27;ink&#x27;},&#x27;Ink&#x27;),h(P.Button,{icon:&#x27;download&#x27;},&#x27;Download&#x27;),h(P.Button,{disabled:true},&#x27;Disabled&#x27;)),
+ Row(h(P.Button,{size:&#x27;sm&#x27;,variant:&#x27;accent&#x27;},&#x27;Small accent&#x27;),h(P.Button,{size:&#x27;sm&#x27;},&#x27;Small&#x27;)))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Callout">
+<header><h2>Callout</h2><span>Neutral, warning, danger, success</span></header>
+<iframe title="Callout preview" loading="lazy" style="height:410px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=410 subtitle=&quot;Neutral, warning, danger, success&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,null,h(P.Callout,{title:&#x27;Heads up&#x27;},&#x27;A neutral aside with a lime edge. See &#x27;,h(&#x27;a&#x27;,{href:&#x27;#&#x27;},&#x27;the guide&#x27;),&#x27;.&#x27;),h(P.Callout,{tone:&#x27;warning&#x27;,title:&#x27;Check before you ship&#x27;},&#x27;This change cannot be undone.&#x27;),h(P.Callout,{tone:&#x27;danger&#x27;,title:&#x27;Something failed&#x27;},&#x27;The build stopped at step 3.&#x27;),h(P.Callout,{tone:&#x27;success&#x27;,title:&#x27;Saved&#x27;},&#x27;All changes are stored.&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Card">
+<header><h2>Card</h2><span>Default, accent, invert; eyebrow, footer</span></header>
+<iframe title="Card preview" loading="lazy" style="height:330px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=330 subtitle=&quot;Default, accent, invert; eyebrow, footer&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{style:{display:&#x27;grid&#x27;,gridTemplateColumns:&#x27;repeat(auto-fit,minmax(220px,1fr))&#x27;,gap:16}},
+ h(P.Card,{eyebrow:&#x27;Plan&#x27;,title:&#x27;Starter&#x27;,footer:h(P.Button,{size:&#x27;sm&#x27;},&#x27;Choose&#x27;)},&#x27;Everything you need to begin. No card required.&#x27;),
+ h(P.Card,{tone:&#x27;accent&#x27;,eyebrow:&#x27;Recommended&#x27;,title:&#x27;Team&#x27;,footer:h(P.Button,{size:&#x27;sm&#x27;,variant:&#x27;ink&#x27;},&#x27;Choose&#x27;)},&#x27;Shared spaces, review flow and history.&#x27;),
+ h(P.Card,{tone:&#x27;invert&#x27;,eyebrow:&#x27;Custom&#x27;,title:&#x27;Scale&#x27;,footer:h(P.Button,{size:&#x27;sm&#x27;},&#x27;Talk to us&#x27;)},&#x27;Dedicated support and audit trail.&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Checkbox">
+<header><h2>Checkbox</h2><span>Checkbox and radio; lime when on</span></header>
+<iframe title="Checkbox preview" loading="lazy" style="height:150px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Forms&quot; height=150 subtitle=&quot;Checkbox and radio; lime when on&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;},h(P.Checkbox,{label:&#x27;Send me a summary&#x27;,defaultChecked:true}),h(P.Checkbox,{label:&#x27;Unchecked option&#x27;}),h(P.Checkbox,{radio:true,name:&#x27;r&#x27;,label:&#x27;Radio one&#x27;,defaultChecked:true}),h(P.Checkbox,{radio:true,name:&#x27;r&#x27;,label:&#x27;Radio two&#x27;}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="CodeBlock">
+<header><h2>CodeBlock</h2><span>Black block, copy button, prompt or plain</span></header>
+<iframe title="CodeBlock preview" loading="lazy" style="height:230px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Content&quot; height=230 subtitle=&quot;Black block, copy button, prompt or plain&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,null,h(P.CodeBlock,{label:&#x27;Shell&#x27;,lines:[{cmd:&#x27;npm ci&#x27;},{cmd:&#x27;npm run build&#x27;,comment:&#x27;compile&#x27;},{cmd:&#x27;npm test&#x27;,comment:&#x27;all suites&#x27;}]}),h(P.CodeBlock,{label:&#x27;Output&#x27;,prompt:false,lines:[&#x27;ok   12 passed&#x27;,&#x27;ok   0 failed&#x27;]}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Cover">
+<header><h2>Cover</h2><span></span></header>
+<iframe title="Cover preview" loading="lazy" style="height:300px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard height=300 --&gt;
+&lt;style&gt;
+body{margin:0;background:var(--bg)}
+.cv{display:block;width:960px;height:300px}
+.lime{fill:var(--lime)} .ink{fill:var(--fg)} .violet{fill:var(--violet)} .relief{fill:var(--gray)}
+.mk{fill:none;stroke:var(--bg);stroke-width:1.5}
+.name{font-family:var(--font-sans);font-weight:600;font-size:120px;letter-spacing:-0.05em;fill:var(--fg)}
+.tag{font-family:var(--font-sans);font-size:14px;fill:var(--muted)}
+&lt;/style&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;display=swap&quot;&gt;
+&lt;svg class=&quot;cv&quot; viewBox=&quot;0 0 960 300&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; role=&quot;img&quot; aria-label=&quot;Proof&quot;&gt;
+&lt;!--
+Blocks: lime 264x160 (accent, the one loud colour), ink slab 168x260 (fg: black on light, paper on dark), violet 160x92, gray 96x92 as relief; sides are multiples of space-2 (8px).
+Arrangement: a tall ink slab on the right edge with lime over violet and gray stacked beside it, like a printed proof sheet.
+Pattern: precise, technical, mono and ruled -&gt; registration crosshairs (the system&#x27;s own corner mark) on a 24px grid (space-4) across the slab, in the ground colour.
+Steps and radii: space-4 24px pitch, space-2 8px gaps, radius-none (square corners).
+--&gt;
+&lt;rect class=&quot;lime&quot; x=&quot;496&quot; y=&quot;24&quot; width=&quot;264&quot; height=&quot;160&quot;/&gt;
+&lt;rect class=&quot;violet&quot; x=&quot;496&quot; y=&quot;192&quot; width=&quot;160&quot; height=&quot;92&quot;/&gt;
+&lt;rect class=&quot;relief&quot; x=&quot;664&quot; y=&quot;192&quot; width=&quot;96&quot; height=&quot;92&quot;/&gt;
+&lt;rect class=&quot;ink&quot; x=&quot;768&quot; y=&quot;24&quot; width=&quot;168&quot; height=&quot;260&quot;/&gt;
+&lt;g id=&quot;xh&quot;&gt;&lt;/g&gt;
+&lt;text class=&quot;name&quot; x=&quot;20&quot; y=&quot;226&quot;&gt;Proof&lt;/text&gt;
+&lt;text class=&quot;tag&quot; x=&quot;24&quot; y=&quot;262&quot;&gt;Paper, ink and one loud colour.&lt;/text&gt;
+&lt;/svg&gt;
+&lt;script&gt;
+(function(){
+  var g=document.getElementById(&#x27;xh&#x27;),out=&#x27;&#x27;;
+  for(var r=0;r&lt;10;r++)for(var c=0;c&lt;7;c++){
+    var x=780+c*24, y=36+r*24;
+    if(y&gt;270) continue;
+    out+=&#x27;&lt;path class=&quot;mk&quot; d=&quot;M&#x27;+x+&#x27; &#x27;+(y-8)+&#x27;v16M&#x27;+(x-8)+&#x27; &#x27;+y+&#x27;h16M&#x27;+(x+3)+&#x27; &#x27;+y+&#x27;a3 3 0 1 0 -6 0 3 3 0 1 0 6 0&quot;/&gt;&#x27;;
+  }
+  g.innerHTML=out;
+})();
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="DataTable">
+<header><h2>DataTable</h2><span>Inverted header, lime row hover</span></header>
+<iframe title="DataTable preview" loading="lazy" style="height:320px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Content&quot; height=320 subtitle=&quot;Inverted header, lime row hover&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+var code=function(t){return h(&quot;code&quot;,null,t)}, fr=function(){return h.apply(null,[React.Fragment,null].concat([].slice.call(arguments)))};
+function Demo(){return h(P.DataTable,{columns:[&#x27;Task&#x27;,&#x27;Command&#x27;,&#x27;Notes&#x27;],rows:[[&#x27;Install&#x27;,code(&#x27;npm ci&#x27;),&#x27;Clean install&#x27;],[&#x27;Build&#x27;,code(&#x27;npm run build&#x27;),h(&#x27;a&#x27;,{href:&#x27;#&#x27;},&#x27;Build guide&#x27;)],[&#x27;Test&#x27;,fr(code(&#x27;npm test&#x27;),&#x27; or &#x27;,code(&#x27;npm t&#x27;)),&#x27;Runs all suites&#x27;]]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Disclosure">
+<header><h2>Disclosure</h2><span>Native details, plus turns to cross</span></header>
+<iframe title="Disclosure preview" loading="lazy" style="height:290px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=290 subtitle=&quot;Native details, plus turns to cross&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Disclosure,{items:[{title:&#x27;What is this for?&#x27;,content:&#x27;A native details list: keyboard and screen-reader friendly with no script.&#x27;,open:true},{title:&#x27;Can I nest it?&#x27;,content:&#x27;Keep it one level deep.&#x27;},{title:&#x27;Does it animate?&#x27;,content:&#x27;No. The plus turns into a cross and the body appears.&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Footer">
+<header><h2>Footer</h2><span>Big sign-off, links, barcode</span></header>
+<iframe title="Footer preview" loading="lazy" style="height:260px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=260 subtitle=&quot;Big sign-off, links, barcode&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Footer,{title:[&#x27;MIT licensed.&#x27;,h(&#x27;br&#x27;,{key:1}),&#x27;Made in the open.&#x27;],links:[{href:&#x27;#&#x27;,label:&#x27;Repository&#x27;},{href:&#x27;#&#x27;,label:&#x27;Changelog&#x27;},{href:&#x27;#&#x27;,label:&#x27;Licence&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Glyph">
+<header><h2>Glyph</h2><span>Every glyph, 24px grid, 2px stroke</span></header>
+<iframe title="Glyph preview" loading="lazy" style="height:1500px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Symbols&quot; height=1500 subtitle=&quot;Every glyph, 24px grid, 2px stroke&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){
+  var names=P.glyphNames;
+  return h(&#x27;div&#x27;,{style:{display:&#x27;grid&#x27;,gridTemplateColumns:&#x27;repeat(auto-fill,minmax(104px,1fr))&#x27;,gap:0,border:&#x27;2px solid var(--rule)&#x27;,background:&#x27;var(--surface)&#x27;}}, names.map(function(n){
+    return h(&#x27;div&#x27;,{key:n,style:{display:&#x27;grid&#x27;,justifyItems:&#x27;center&#x27;,gap:8,padding:&#x27;16px 4px&#x27;,borderRight:&#x27;1px solid var(--hair)&#x27;,borderBottom:&#x27;1px solid var(--hair)&#x27;}},
+      h(P.Glyph,{name:n,size:32}), h(&#x27;span&#x27;,{className:&#x27;m&#x27;,style:{fontFamily:&#x27;var(--font-mono)&#x27;,fontSize:10,textTransform:&#x27;uppercase&#x27;,textAlign:&#x27;center&#x27;,wordBreak:&#x27;break-word&#x27;}},n));
+  }));
+}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Hero">
+<header><h2>Hero</h2><span>Meta row, crosshairs, fitted wordmark</span></header>
+<iframe title="Hero preview" loading="lazy" style="height:420px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=420 subtitle=&quot;Meta row, crosshairs, fitted wordmark&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Hero,{left:&#x27;A short descriptor, one line.&#x27;,right:&#x27;v1.0\nMIT&#x27;,title:&#x27;Proof&#x27;},h(P.Band,{headline:&#x27;Say it plainly.&#x27;,meta:&#x27;2026&#x27;},&#x27;A hero stacks meta, registration marks and a fitted wordmark, with an optional band below.&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="IconButton">
+<header><h2>IconButton</h2><span>Square glyph buttons; label is required</span></header>
+<iframe title="IconButton preview" loading="lazy" style="height:100px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Actions&quot; height=100 subtitle=&quot;Square glyph buttons; label is required&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return Row(h(P.IconButton,{icon:&#x27;menu&#x27;,label:&#x27;Menu&#x27;}),h(P.IconButton,{icon:&#x27;search&#x27;,label:&#x27;Search&#x27;}),h(P.IconButton,{icon:&#x27;settings&#x27;,label:&#x27;Settings&#x27;,variant:&#x27;accent&#x27;}),h(P.IconButton,{icon:&#x27;sun&#x27;,label:&#x27;Theme&#x27;,variant:&#x27;ink&#x27;}),h(P.IconButton,{icon:&#x27;trash&#x27;,label:&#x27;Delete&#x27;,disabled:true}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Input">
+<header><h2>Input</h2><span>Label, hint, error, disabled</span></header>
+<iframe title="Input preview" loading="lazy" style="height:320px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Forms&quot; height=320 subtitle=&quot;Label, hint, error, disabled&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;},h(P.Input,{label:&#x27;Project name&#x27;,placeholder:&#x27;untitled&#x27;,hint:&#x27;Lowercase, no spaces.&#x27;}),h(P.Input,{label:&#x27;Email&#x27;,defaultValue:&#x27;name@&#x27;,error:&#x27;Enter a full address.&#x27;}),h(P.Input,{label:&#x27;Locked&#x27;,defaultValue:&#x27;read only&#x27;,disabled:true}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Pattern">
+<header><h2>Pattern</h2><span>13 fills: pattern kinds</span></header>
+<iframe title="Pattern preview" loading="lazy" style="height:780px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Symbols&quot; height=780 subtitle=&quot;13 fills: pattern kinds&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){
+  var kinds=[&#x27;barcode&#x27;,&#x27;halftone&#x27;,&#x27;dots&#x27;,&#x27;ticks&#x27;,&#x27;stripes&#x27;,&#x27;hatch&#x27;,&#x27;checker&#x27;,&#x27;grid&#x27;,&#x27;crosses&#x27;,&#x27;ruler&#x27;,&#x27;steps&#x27;,&#x27;waves&#x27;,&#x27;chevrons&#x27;];
+  return h(&#x27;div&#x27;,{style:{display:&#x27;grid&#x27;,gridTemplateColumns:&#x27;repeat(auto-fill,minmax(200px,1fr))&#x27;,gap:24}}, kinds.map(function(k,i){
+    return h(&#x27;div&#x27;,{key:k,style:{display:&#x27;grid&#x27;,gap:8}}, h(P.Pattern,{kind:k,height:56,tone:i%4===2?&#x27;violet&#x27;:undefined,seed:&#x27;proof &#x27;+k}), h(&#x27;span&#x27;,{style:{fontFamily:&#x27;var(--font-mono)&#x27;,fontSize:11,textTransform:&#x27;uppercase&#x27;}},k));
+  }));
+}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Progress">
+<header><h2>Progress</h2><span>Segmented bar, discrete steps</span></header>
+<iframe title="Progress preview" loading="lazy" style="height:160px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Status&quot; height=160 subtitle=&quot;Segmented bar, discrete steps&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;,style:{maxWidth:420}},h(P.Progress,{label:&#x27;Upload&#x27;,value:7,max:10}),h(P.Progress,{label:&#x27;Checks&#x27;,value:3,max:12}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="RowList">
+<header><h2>RowList</h2><span>Name, description, optional tag</span></header>
+<iframe title="RowList preview" loading="lazy" style="height:330px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Content&quot; height=330 subtitle=&quot;Name, description, optional tag&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.RowList,{rows:[{title:&#x27;quick&#x27;,description:&#x27;Fast edits, no ceremony.&#x27;},{title:&#x27;balanced&#x27;,description:&#x27;Everyday work with checks.&#x27;,tag:&#x27;Default&#x27;},{title:&#x27;research&#x27;,description:&#x27;Longer runs with review.&#x27;,tag:&#x27;Experimental&#x27;,tagVariant:&#x27;experimental&#x27;},{title:&#x27;strict&#x27;,description:&#x27;Locked down for regulated work.&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Section">
+<header><h2>Section</h2><span>Title column and body column</span></header>
+<iframe title="Section preview" loading="lazy" style="height:290px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=290 subtitle=&quot;Title column and body column&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Section,{id:&#x27;one&#x27;,title:&#x27;Section&#x27;,lead:&#x27;A short lead-in sentence.&#x27;},h(&#x27;p&#x27;,null,&#x27;Two columns: a narrow head with the title and lead, and a wide body. It collapses to one column on small screens and is separated by a 2px rule.&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Select">
+<header><h2>Select</h2><span>Native select, square</span></header>
+<iframe title="Select preview" loading="lazy" style="height:140px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Forms&quot; height=140 subtitle=&quot;Native select, square&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Select,{label:&#x27;Environment&#x27;,options:[&#x27;Development&#x27;,&#x27;Staging&#x27;,&#x27;Production&#x27;],defaultValue:&#x27;Staging&#x27;})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Stat">
+<header><h2>Stat</h2><span>Large value, delta, note</span></header>
+<iframe title="Stat preview" loading="lazy" style="height:210px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=210 subtitle=&quot;Large value, delta, note&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{style:{display:&#x27;grid&#x27;,gridTemplateColumns:&#x27;repeat(auto-fit,minmax(200px,1fr))&#x27;,gap:16}},h(P.Stat,{label:&#x27;Uptime&#x27;,value:&#x27;99.98%&#x27;,delta:&#x27;+0.02 this week&#x27;,note:&#x27;Last 30 days&#x27;}),h(P.Stat,{label:&#x27;Open issues&#x27;,value:&#x27;14&#x27;,delta:&#x27;-3 this week&#x27;}),h(P.Stat,{label:&#x27;Build time&#x27;,value:&#x27;4m 12s&#x27;}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Status">
+<header><h2>Status</h2><span>Glyph plus word; never colour alone</span></header>
+<iframe title="Status preview" loading="lazy" style="height:110px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Status&quot; height=110 subtitle=&quot;Glyph plus word; never colour alone&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return Row(h(P.Status,{kind:&#x27;success&#x27;},&#x27;Healthy&#x27;),h(P.Status,{kind:&#x27;warning&#x27;},&#x27;Degraded&#x27;),h(P.Status,{kind:&#x27;danger&#x27;},&#x27;Down&#x27;),h(P.Status,{kind:&#x27;info&#x27;},&#x27;Queued&#x27;),h(P.Status,{kind:&#x27;neutral&#x27;},&#x27;Idle&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="StatusBar">
+<header><h2>StatusBar</h2><span>Barcodes either side of status dots</span></header>
+<iframe title="StatusBar preview" loading="lazy" style="height:110px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=110 subtitle=&quot;Barcodes either side of status dots&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.StatusBar,{seed:&#x27;left&#x27;,seed2:&#x27;right&#x27;,items:[{on:true,label:&#x27;Online&#x27;},{label:&#x27;12:00:00&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Steps">
+<header><h2>Steps</h2><span>Three numbered steps (CSS counter)</span></header>
+<iframe title="Steps preview" loading="lazy" style="height:200px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Content&quot; height=200 subtitle=&quot;Three numbered steps (CSS counter)&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Steps,{steps:[{title:&#x27;Approve the plan&#x27;,detail:&#x27;Agreed before work starts.&#x27;},{title:&#x27;Run the job&#x27;,detail:&#x27;Runs without supervision.&#x27;},{title:&#x27;Review the result&#x27;,detail:&#x27;Merge or roll back.&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Switch">
+<header><h2>Switch</h2><span>On is lime; ink knob</span></header>
+<iframe title="Switch preview" loading="lazy" style="height:120px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Forms&quot; height=120 subtitle=&quot;On is lime; ink knob&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(&#x27;div&#x27;,{className:&#x27;col&#x27;},h(P.Switch,{label:&#x27;Notifications&#x27;,defaultOn:true}),h(P.Switch,{label:&#x27;Dark mode&#x27;}))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Tabs">
+<header><h2>Tabs</h2><span>Inverted selected tab, bordered panel</span></header>
+<iframe title="Tabs preview" loading="lazy" style="height:220px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Containers&quot; height=220 subtitle=&quot;Inverted selected tab, bordered panel&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Tabs,{tabs:[{id:&#x27;a&#x27;,label:&#x27;Overview&#x27;,content:&#x27;The default view. Selected tabs invert to ink; hover is lime.&#x27;},{id:&#x27;b&#x27;,label:&#x27;Activity&#x27;,content:&#x27;A second panel of content.&#x27;},{id:&#x27;c&#x27;,label:&#x27;Settings&#x27;,content:&#x27;A third panel.&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Tag">
+<header><h2>Tag</h2><span>Outline, brand and signal fills</span></header>
+<iframe title="Tag preview" loading="lazy" style="height:110px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Status&quot; height=110 subtitle=&quot;Outline, brand and signal fills&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return Row(h(P.Tag,null,&#x27;Outline&#x27;),h(P.Tag,{variant:&#x27;default&#x27;},&#x27;Default&#x27;),h(P.Tag,{variant:&#x27;experimental&#x27;},&#x27;Experimental&#x27;),h(P.Tag,{variant:&#x27;private&#x27;},&#x27;Private&#x27;),h(P.Tag,{variant:&#x27;success&#x27;},&#x27;Passed&#x27;),h(P.Tag,{variant:&#x27;warning&#x27;},&#x27;Review&#x27;),h(P.Tag,{variant:&#x27;danger&#x27;},&#x27;Failed&#x27;))}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="TileGrid">
+<header><h2>TileGrid</h2><span>Bordered tiles with glyph; invert on hover</span></header>
+<iframe title="TileGrid preview" loading="lazy" style="height:440px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Content&quot; height=440 subtitle=&quot;Bordered tiles with glyph; invert on hover&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.TileGrid,{tiles:[{label:&#x27;docs/&#x27;,icon:&#x27;file-text&#x27;,title:&#x27;Docs&#x27;,description:&#x27;Guides and reference.&#x27;},{label:&#x27;api/&#x27;,icon:&#x27;terminal&#x27;,title:&#x27;API&#x27;,description:&#x27;Endpoints and schemas.&#x27;},{label:&#x27;ops/&#x27;,icon:&#x27;server&#x27;,title:&#x27;Ops&#x27;,description:&#x27;Runbooks and alerts.&#x27;,tag:&#x27;Internal&#x27;,tagVariant:&#x27;private&#x27;}]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section><section id="Topbar">
+<header><h2>Topbar</h2><span>Mark tile, mono nav, actions</span></header>
+<iframe title="Topbar preview" loading="lazy" style="height:110px" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;tokens.css&quot;&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;components/bundle.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/react@18/umd/react.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;https://unpkg.com/react-dom@18/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;components/bundle.js&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body&gt;&lt;!-- @dsCard group=&quot;Layout&quot; height=110 subtitle=&quot;Mark tile, mono nav, actions&quot; --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Martian+Mono:wdth,wght@75..112,100..800&amp;display=swap&quot;&gt;
+&lt;style&gt;body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}&lt;/style&gt;
+&lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, [&#x27;div&#x27;,{className:&#x27;row&#x27;}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.Topbar,{name:&#x27;proof&#x27;,mark:&#x27;asterisk&#x27;,links:[{href:&#x27;#&#x27;,label:&#x27;Docs&#x27;},{href:&#x27;#&#x27;,label:&#x27;Components&#x27;},{href:&#x27;#&#x27;,label:&#x27;Changelog&#x27;}],actions:[h(P.Button,{key:1,variant:&#x27;accent&#x27;,href:&#x27;#&#x27;,size:&#x27;sm&#x27;},&#x27;Sign in&#x27;),h(P.IconButton,{key:2,icon:&#x27;sun&#x27;,label:&#x27;Theme&#x27;})]})}
+ReactDOM.createRoot(document.getElementById(&#x27;root&#x27;)).render(h(Demo));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section>
+<script>
+document.getElementById('theme').onclick=function(){
+  var dark=document.documentElement.dataset.theme!=='dark', t=dark?'dark':'light';
+  document.documentElement.dataset.theme=t;
+  document.querySelectorAll('iframe').forEach(function(f){try{f.contentDocument.documentElement.dataset.theme=t}catch(e){}});
+};
+</script>
+</body>
+</html>

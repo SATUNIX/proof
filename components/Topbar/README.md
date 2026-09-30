@@ -1,0 +1,1 @@
+Topbar is the sticky header: a black tile with a lime Glyph or character (`mark`), `name`, a centred mono nav (`links`) and `actions` right (an accent Button and an IconButton). 2px rule beneath. On narrow screens the nav becomes a second scrollable row.

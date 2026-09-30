@@ -1,0 +1,1 @@
+CodeBlock shows commands or output on `code-bg` with a Copy button. `lines` are strings or `{cmd, comment}`; commands get a lime `$ ` prompt, comments render dim. Pass `prompt={false}` for plain output or file contents. `label` names the block (Shell, Output, JSON). Lines scroll horizontally; do not wrap.

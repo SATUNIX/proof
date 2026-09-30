@@ -1,0 +1,9 @@
+<!-- @dsCard group="Containers" height=410 subtitle="Neutral, warning, danger, success" -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<style>body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}</style>
+<div id="root"></div>
+<script>
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, ['div',{className:'row'}].concat([].slice.call(arguments))); };
+function Demo(){return h('div',null,h(P.Callout,{title:'Heads up'},'A neutral aside with a lime edge. See ',h('a',{href:'#'},'the guide'),'.'),h(P.Callout,{tone:'warning',title:'Check before you ship'},'This change cannot be undone.'),h(P.Callout,{tone:'danger',title:'Something failed'},'The build stopped at step 3.'),h(P.Callout,{tone:'success',title:'Saved'},'All changes are stored.'))}
+ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>

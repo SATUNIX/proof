@@ -1,0 +1,3 @@
+Button is the square, 2px-bordered action in mono caps. Variants: default outline, `accent` (lime, the one primary action of a view), `ink` (solid `fg`, secondary emphasis). `size="sm"` for dense rows, `icon` for a leading glyph (14px). Pass `href` for a link, else it renders a `<button>`.
+
+The consumer provides a one- or two-word label in sentence case (CSS uppercases it). Hover inverts to `inv-bg`; accent hover goes black with lime text. Do not add radius or shadow. One accent Button per view.

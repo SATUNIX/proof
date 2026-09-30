@@ -1,0 +1,1 @@
+Steps is a three-cell numbered sequence. The "Step N" label is a CSS counter, so never type numbers. Pass `steps` as `{title, detail}`; use only for real ordered processes of three to five items.

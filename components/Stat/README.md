@@ -1,0 +1,1 @@
+Stat shows one headline number at 56px with a mono `label`, optional `delta` (mono caps) and `note`. The consumer provides an already formatted value. Place three or four in a row. Do not colour a delta red or green; say "up" or "down" with a sign or glyph.

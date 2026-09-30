@@ -1,0 +1,1 @@
+Cover is the system's brand card: the wordmark beside a stack of lime, violet, gray and ink blocks, with registration crosshairs on the ink slab. It is an illustration (see `preview.html`), not a component exported on `window.Proof`. Use it as a header image or social card; keep the block sides on multiples of `space-2` and the corners square.

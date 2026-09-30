@@ -1,0 +1,1 @@
+Switch is an on/off control for settings that apply immediately: a 44×24 track, lime when on, with a square knob. Pass `label`, `defaultOn` or controlled `on`, `onChange(bool)`. For choices submitted with a form use Checkbox.

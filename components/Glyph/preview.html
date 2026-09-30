@@ -1,0 +1,15 @@
+<!-- @dsCard group="Symbols" height=1500 subtitle="Every glyph, 24px grid, 2px stroke" -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<style>body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}</style>
+<div id="root"></div>
+<script>
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, ['div',{className:'row'}].concat([].slice.call(arguments))); };
+function Demo(){
+  var names=P.glyphNames;
+  return h('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fill,minmax(104px,1fr))',gap:0,border:'2px solid var(--rule)',background:'var(--surface)'}}, names.map(function(n){
+    return h('div',{key:n,style:{display:'grid',justifyItems:'center',gap:8,padding:'16px 4px',borderRight:'1px solid var(--hair)',borderBottom:'1px solid var(--hair)'}},
+      h(P.Glyph,{name:n,size:32}), h('span',{className:'m',style:{fontFamily:'var(--font-mono)',fontSize:10,textTransform:'uppercase',textAlign:'center',wordBreak:'break-word'}},n));
+  }));
+}
+ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>

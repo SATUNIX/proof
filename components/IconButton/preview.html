@@ -1,0 +1,9 @@
+<!-- @dsCard group="Actions" height=100 subtitle="Square glyph buttons; label is required" -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<style>body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}</style>
+<div id="root"></div>
+<script>
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, ['div',{className:'row'}].concat([].slice.call(arguments))); };
+function Demo(){return Row(h(P.IconButton,{icon:'menu',label:'Menu'}),h(P.IconButton,{icon:'search',label:'Search'}),h(P.IconButton,{icon:'settings',label:'Settings',variant:'accent'}),h(P.IconButton,{icon:'sun',label:'Theme',variant:'ink'}),h(P.IconButton,{icon:'trash',label:'Delete',disabled:true}))}
+ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>

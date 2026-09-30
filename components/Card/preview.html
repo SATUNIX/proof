@@ -1,0 +1,12 @@
+<!-- @dsCard group="Containers" height=330 subtitle="Default, accent, invert; eyebrow, footer" -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<style>body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}</style>
+<div id="root"></div>
+<script>
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, ['div',{className:'row'}].concat([].slice.call(arguments))); };
+function Demo(){return h('div',{style:{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:16}},
+ h(P.Card,{eyebrow:'Plan',title:'Starter',footer:h(P.Button,{size:'sm'},'Choose')},'Everything you need to begin. No card required.'),
+ h(P.Card,{tone:'accent',eyebrow:'Recommended',title:'Team',footer:h(P.Button,{size:'sm',variant:'ink'},'Choose')},'Shared spaces, review flow and history.'),
+ h(P.Card,{tone:'invert',eyebrow:'Custom',title:'Scale',footer:h(P.Button,{size:'sm'},'Talk to us')},'Dedicated support and audit trail.'))}
+ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>

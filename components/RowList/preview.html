@@ -1,0 +1,9 @@
+<!-- @dsCard group="Content" height=330 subtitle="Name, description, optional tag" -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wdth,wght@75..112,100..800&display=swap">
+<style>body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font-family:var(--font-sans)} .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center} .col{display:grid;gap:24px}</style>
+<div id="root"></div>
+<script>
+var P = window.Proof, h = React.createElement, Row = function(){ return h.apply(null, ['div',{className:'row'}].concat([].slice.call(arguments))); };
+function Demo(){return h(P.RowList,{rows:[{title:'quick',description:'Fast edits, no ceremony.'},{title:'balanced',description:'Everyday work with checks.',tag:'Default'},{title:'research',description:'Longer runs with review.',tag:'Experimental',tagVariant:'experimental'},{title:'strict',description:'Locked down for regulated work.'}]})}
+ReactDOM.createRoot(document.getElementById('root')).render(h(Demo));
+</script>

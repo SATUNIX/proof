@@ -1,0 +1,1 @@
+RowList is a framed list of named rows: a 28px `title`, a one-line `description` and an optional Tag. Rows turn lime on hover. Use for a short set of modes, plans or presets (up to about eight).

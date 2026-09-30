@@ -1,0 +1,1 @@
+Banner is the page-level notice: a huge lime tag block (`tag`, one word), a `title` headline, a paragraph and optional `actions` (Buttons). Use once per page, directly under the hero. State the limit or status plainly in the headline.

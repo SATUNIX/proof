@@ -1,0 +1,1 @@
+Callout is a framed aside with a 14px edge and a glyph beside the title. `tone`: default (lime edge, info glyph), `warning`, `danger`, `success` (their signal colour edge and glyph). Provide a short title and one or two sentences. Use one per section; for a page-level notice use Banner.

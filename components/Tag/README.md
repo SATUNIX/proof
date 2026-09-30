@@ -1,0 +1,1 @@
+Tag is a small mono-caps label with a 2px border. Variants: `outline` (neutral metadata), `default` (black with lime text: the preferred choice), `experimental` (violet), `private` (inverted), and `success`, `warning`, `danger` (solid signal fills with `on-signal` text). Keep labels to 1–4 words. A Tag is never clickable.

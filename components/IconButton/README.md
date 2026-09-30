@@ -1,0 +1,1 @@
+IconButton is a square 2px-bordered button holding one Glyph at 16px. `label` is required (it is the accessible name and tooltip). Use for theme toggles, menus, copy, close and similar. Same variants as Button. Never use it for the primary action.

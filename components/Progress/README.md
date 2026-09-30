@@ -1,0 +1,1 @@
+Progress is a segmented bar of `max` cells (default 10) with `value` filled in `fg`. Use for discrete steps or rough completion; it has role progressbar and an optional mono `label`. Do not use it for indeterminate loading.

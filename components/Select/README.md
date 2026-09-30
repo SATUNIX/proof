@@ -1,0 +1,1 @@
+Select is a labelled native `<select>` styled like Input, with a chevron glyph. `options` are strings or `{value,label}`. Use for four or more options; for two or three use radio Checkboxes.

@@ -1,0 +1,1 @@
+Tabs switches between panels. Pass `tabs` as `{id,label,content}`; the selected tab inverts to `inv-bg` and the panel is framed. Use for three to five peers; labels are one or two words. Keyboard: tabs are buttons in order.

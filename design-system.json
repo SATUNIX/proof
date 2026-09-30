@@ -1,0 +1,27 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-09-30T23:23:38.662Z"
+  },
+  "title": "Proof",
+  "namespace": "Proof",
+  "libraries": [
+    {
+      "name": "react",
+      "version": "18"
+    },
+    {
+      "name": "react-dom",
+      "version": "18"
+    }
+  ],
+  "sections": {},
+  "groups": [],
+  "assetGroups": {},
+  "blobs": {},
+  "docs": {
+    "sections": []
+  }
+}

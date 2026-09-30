@@ -1,0 +1,5 @@
+Glyph draws one symbol from a fixed set of about 120 on a 24px grid: 2px stroke, square caps, mitred joins, `currentColor`, so it takes the colour of the text around it. Pass `name` (see the preview for every name), `size` (default 24; use 14 inside buttons and labels, 16 in icon buttons, 20 beside headings, 28–32 as a feature), `weight` (stroke, default 2) and `title` (set it only when the glyph carries meaning alone; otherwise it is hidden from assistive tech).
+
+Groups: arrows and chevrons, marks (plus, x, check, asterisk, hash, slash), outline shapes (circle, square, triangle, diamond, hexagon, sparkle, starburst, crosshair, registration, target), solid shapes (`*-fill`, carets, play, pause, stop, record, bolt), interface, feedback (info, help, warning, error, success, block) and technical (terminal, code, file, database, server, cpu, branch, commit, merge, charts).
+
+Use one weight per view. Never tint a glyph with lime on paper; lime is a fill, not an ink. Pair status glyphs with a word.

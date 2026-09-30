@@ -1,0 +1,1 @@
+Checkbox is a 22px square (or circle with `radio`) that fills lime with an ink tick when on. Pass `label`, `name` (radios), `defaultChecked`/`checked`, `onChange`. The whole label is the hit target.

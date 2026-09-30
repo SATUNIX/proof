@@ -1,0 +1,1 @@
+DataTable is a framed table with an inverted header. Pass `columns` and `rows` (arrays of nodes). First column is the subject at 16px/600, the rest 13px. Rows turn lime on hover. Keep to two to four columns; wrap code in `<code>`. It scrolls sideways on narrow screens.

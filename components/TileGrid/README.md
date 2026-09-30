@@ -1,0 +1,1 @@
+TileGrid is a three-column grid of bordered link tiles: mono `label`, optional Glyph `icon` (28px), 28px `title`, a description and an optional Tag pinned to the bottom. Hover inverts. Use for navigation hubs and module maps; collapses to two then one column.

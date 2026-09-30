@@ -1,0 +1,1 @@
+Section is the page's two-column block: `title` at 56px with a muted `lead` (28ch max) on the left; body (about 2.6× wider) on the right, under a 2px rule. Give it an `id` for nav anchors. One column below 900px.

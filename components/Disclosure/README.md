@@ -1,0 +1,1 @@
+Disclosure is a list of native `<details>` items with 20px bold summaries and a plus glyph that turns into a cross when open. Pass `items` as `{title, content, open?}`. Use for FAQs and long optional detail; keep it one level deep.
