@@ -110,7 +110,7 @@
 .pf-callout>div{padding:var(--space-3) var(--space-4)}
 .pf-callout h3{margin:0 0 var(--space-2);font-size:20px;font-weight:700;display:flex;align-items:center;gap:var(--space-2);font-variation-settings:"wdth" 100}
 .pf-callout__body{line-height:1.5;font-size:14px}
-.pf-callout a,.pf-banner a,.pf-sec a,.pf-card a{color:var(--link)}
+.pf-callout a:not(.pf-btn),.pf-banner a:not(.pf-btn),.pf-sec a:not(.pf-btn),.pf-card a:not(.pf-btn){color:var(--link)}
 .pf-banner{display:grid;grid-template-columns:auto 1fr;border:2px solid var(--rule);background:var(--surface);color:var(--fg);font-family:var(--font-sans)}
 .pf-banner__tag{background:var(--accent);color:var(--on-accent);border-right:2px solid var(--ink);padding:var(--space-4) var(--space-5);display:grid;place-items:center;font-size:56px;font-weight:800;line-height:1;letter-spacing:-.04em;text-transform:uppercase;font-variation-settings:"wdth" 100}
 .pf-banner__body{padding:var(--space-4);display:grid;gap:var(--space-3);align-content:start}

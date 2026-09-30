@@ -9,7 +9,10 @@ import glob, html, os, re
 HEAD = ('<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components/bundle.css">'
         '<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>'
         '<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>'
-        '<script src="components/bundle.js"></script>')
+        '<script src="components/bundle.js"></script>'
+        '<style>html,body{overflow:hidden}</style>'
+        '<script>addEventListener("click",function(e){if(e.target.closest("a,form"))e.preventDefault()},true);'
+        'addEventListener("submit",function(e){e.preventDefault()},true)</script>')
 
 cards = []
 for path in sorted(glob.glob('components/*/preview.html')):
@@ -22,7 +25,7 @@ for path in sorted(glob.glob('components/*/preview.html')):
     doc = f'<!doctype html><html><head><meta charset="utf-8">{HEAD}</head><body>{src}</body></html>'
     cards.append(f'''<section id="{name}">
 <header><h2>{name}</h2><span>{html.escape(sub)}</span></header>
-<iframe title="{name} preview" loading="lazy" style="height:{height}px" srcdoc="{html.escape(doc)}"></iframe>
+<iframe title="{name} preview" loading="lazy" scrolling="no" style="height:{height}px" srcdoc="{html.escape(doc)}"></iframe>
 </section>''')
 
 nav = ''.join(f'<a href="#{p.split("/")[1]}">{p.split("/")[1]}</a>' for p in sorted(glob.glob('components/*/preview.html')))
@@ -49,14 +52,27 @@ iframe{{display:block;width:100%;border:0;background:var(--bg)}}
 </head>
 <body>
 <h1>Proof</h1>
-<nav><button id="theme">Toggle dark</button>{nav}</nav>
+<nav><button id="theme" aria-pressed="false">Switch to dark</button>{nav}</nav>
 {''.join(cards)}
 <script>
-document.getElementById('theme').onclick=function(){{
-  var dark=document.documentElement.dataset.theme!=='dark', t=dark?'dark':'light';
-  document.documentElement.dataset.theme=t;
-  document.querySelectorAll('iframe').forEach(function(f){{try{{f.contentDocument.documentElement.dataset.theme=t}}catch(e){{}}}});
-}};
+var root=document.documentElement,theme='light';
+try{{theme=localStorage.getItem('proof-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}}catch(e){{}}
+function apply(f){{try{{f.contentDocument.documentElement.dataset.theme=theme}}catch(e){{}}}}
+function fit(f){{
+  try{{
+    var d=f.contentDocument,h=function(){{f.style.height=Math.max(d.documentElement.scrollHeight,d.body.scrollHeight)+'px'}};
+    h();new ResizeObserver(h).observe(d.body);
+  }}catch(e){{}}
+}}
+var btn=document.getElementById('theme');
+function set(t){{
+  theme=t;root.dataset.theme=t;btn.textContent=t==='dark'?'Switch to light':'Switch to dark';btn.setAttribute('aria-pressed',t==='dark');
+  try{{localStorage.setItem('proof-theme',t)}}catch(e){{}}
+  document.querySelectorAll('iframe').forEach(apply);
+}}
+document.querySelectorAll('iframe').forEach(function(f){{f.addEventListener('load',function(){{apply(f);fit(f)}})}});
+btn.onclick=function(){{set(theme==='dark'?'light':'dark')}};
+set(theme);
 </script>
 </body>
 </html>

@@ -32,6 +32,23 @@ Set `data-theme="dark"` on the root element for the dark theme. TypeScript types
 | `index.html` | Standalone gallery of every preview; open it in a browser. Regenerate with `python3 scripts/build-gallery.py` |
 | `USAGE.md` | Load order summary |
 
+## Dark mode
+
+Dark is a full remap of the semantic tokens, not an inversion of the page. Set `data-theme="dark"` on `<html>` (or any ancestor; it scopes to that subtree) and every component follows. `data-theme="light"` or no attribute is light.
+
+```js
+document.documentElement.dataset.theme = 'dark';
+```
+
+`tokens.css` does not read `prefers-color-scheme`, so choose the theme yourself, for example:
+
+```js
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+```
+
+What changes: `bg` becomes black and `fg` paper; `rule` and `hair` flip to paper; `surface` is `#111`; `inv-bg`/`inv-fg` swap; `link` and `focus` become lime; signal colours lighten (`success`, `warning`, `danger`). What does not: `accent` (lime) with `on-accent` (black), and the raw `paper`, `ink`, `lime`, `violet`, `gray`. Use semantic tokens everywhere and dark mode needs no extra work; raw tokens will not adapt. Every preview in `index.html` can be viewed in both themes with the toggle.
+
 ## Brand guidelines
 
 Proof is a general-purpose design system in a brutalist print style: paper and ink, hard 2px rules, square corners, mono labels, tight grotesk headlines, and one loud colour. Build anything in it (sites, docs, dashboards, decks, tools) as a printed sheet, not a glossy app: flat, ruled, dense and confident.
